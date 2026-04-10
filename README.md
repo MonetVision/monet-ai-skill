@@ -3,7 +3,7 @@
 [![API](https://img.shields.io/badge/API-monet.vision-blue)](https://monet.vision)
 [![Documentation](https://img.shields.io/badge/docs-latest-green)](https://monet.vision/skills/keys)
 
-Comprehensive AI content generation API designed for AI agents. Monet AI provides unified access to state-of-the-art AI generation models for video (Sora, Veo, Doubao Seedance, Wan, Hailuo, Kling), image (GPT-4o, Nano Banana, Seedream, Flux, Imagen, Ideogram), and music (MiniMax Music) generation. Build intelligent workflows that combine multiple AI capabilities for automated content creation pipelines.
+Comprehensive AI content generation API designed for AI agents. Monet AI provides unified access to state-of-the-art AI generation models for video (Sora, Veo, Doubao Seedance, Wan, Hailuo, Kling, Grok), image (GPT-4o, Nano Banana, Seedream, Flux, Imagen, Ideogram), and music (MiniMax Music) generation. Build intelligent workflows that combine multiple AI capabilities for automated content creation pipelines.
 
 ## ✨ Features
 
@@ -15,6 +15,7 @@ Comprehensive AI content generation API designed for AI agents. Monet AI provide
 - **Wan**: Alibaba's video generation model with excellent localization support
 - **Hailuo**: Fast video generation with good quality-speed balance
 - **Kling**: Kuaishou's video generation model with strong visual realism
+- **Grok (xAI)**: xAI's Aurora video generation model
 
 ### 🖼️ Image Generation
 
@@ -228,6 +229,11 @@ curl -X POST https://monet.vision/api/v1/files \
 | `kling-2-5`               | Kuaishou  | 5-10s    | Smooth motion, strong consistency          |
 | `hailuo-2-3`              | Hailuo    | 6-10s    | Excellent body movements and physics       |
 | `doubao-seedance-1-5-pro` | ByteDance | 4-12s    | Pro-grade audio-visual sync                |
+| `seedance-2-0`             | ByteDance | 4-15s    | Multimodal reference video generation      |
+| `seedance-2-0-fast`       | ByteDance | 4-15s    | Faster multimodal video generation           |
+| `kling-motion-control`     | Kuaishou  | 3-30s    | Motion replication from reference videos    |
+| `kling-motion-control-3-0`| Kuaishou  | 3-30s    | Motion control (latest version)            |
+| `grok-video`               | xAI       | 6-15s    | Aurora video generation                    |
 
 ### Image Generation Models
 

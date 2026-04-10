@@ -293,7 +293,8 @@ _Supports automatic audio generation_
   images?: string[],
   duration?: 5 | 10,
   resolution?: "480p" | "720p" | "1080p",
-  aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1"
+  aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1",
+  shot_type?: "single" | "multi"  // Single/multi-shot switching
 }
 ```
 
@@ -600,7 +601,73 @@ _Precise semantic understanding_
 }
 ```
 
+**seedance-2-0** - Seedance 2.0
+
+_Multimodal reference video generation_
+
+- 🎯 **Use Cases**: Video creation, extension and editing with multimodal references
+- ⏱️ **Duration**: 4-15 seconds
+- 📺 **Resolution**: 480p-720p
+- 🎵 **Features**: Supports image, video and audio references
+
+```typescript
+{
+  model: "seedance-2-0",
+  prompt?: string,                // max 2000 characters
+  images?: string[],             // max 9 reference images
+  videos?: string[],             // max 3 reference videos
+  audios?: string[],              // max 3 reference audios
+  duration?: number,             // 4-15 seconds
+  resolution?: "480p" | "720p",
+  aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1" | "21:9"
+}
+```
+
+**seedance-2-0-fast** - Seedance 2.0 Fast
+
+_Faster multimodal reference video generation_
+
+- 🎯 **Use Cases**: Faster iteration for multimodal video generation workflows
+- ⏱️ **Duration**: 4-15 seconds
+- 📺 **Resolution**: 480p-720p
+- 🎵 **Features**: Supports image, video and audio references
+
+```typescript
+{
+  model: "seedance-2-0-fast",
+  prompt?: string,                // max 2000 characters
+  images?: string[],             // max 9 reference images
+  videos?: string[],             // max 3 reference videos
+  audios?: string[],              // max 3 reference audios
+  duration?: number,             // 4-15 seconds
+  resolution?: "480p" | "720p",
+  aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1" | "21:9"
+}
+```
+
 #### Special Features
+
+#### Grok (xAI)
+
+**grok-video** - Grok Video
+
+_Aurora video generation from xAI_
+
+- 🎯 **Use Cases**: Video generation powered by xAI's Aurora model
+- ⏱️ **Duration**: 6-15 seconds
+- 📺 **Resolution**: 480p-720p
+- 🎵 **Features**: Reference image support
+
+```typescript
+{
+  model: "grok-video",
+  prompt: string,
+  images?: string[],             // Reference images
+  duration?: 6 | 10 | 15,
+  resolution?: "480p" | "720p",
+  aspect_ratio?: "1:1" | "3:2" | "16:9" | "2:3" | "9:16"
+}
+```
 
 **kling-motion-control** - Kling Motion Control
 
@@ -614,6 +681,25 @@ _Precision motion control via video references_
 ```typescript
 {
   model: "kling-motion-control",
+  prompt: string,                // Required: Detailed motion description
+  images: string[],              // Required: min 1 reference image
+  videos: string[],              // Required: min 1 reference video
+  resolution?: "720p" | "1080p"
+}
+```
+
+**kling-motion-control-3-0** - Kling Motion Control 3.0
+
+_Precision motion control via video references (latest version)_
+
+- 🎯 **Use Cases**: Scenarios requiring motion replication from reference videos (latest version)
+- ⏱️ **Duration**: 3-30 seconds
+- 📺 **Resolution**: 720p/1080p with audio generation support
+- 💰 **Pricing**: 720p: 8 credits/s, 1080p: 15 credits/s
+
+```typescript
+{
+  model: "kling-motion-control-3-0",
   prompt: string,                // Required: Detailed motion description
   images: string[],              // Required: min 1 reference image
   videos: string[],              // Required: min 1 reference video
