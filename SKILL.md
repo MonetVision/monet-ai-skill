@@ -294,7 +294,7 @@ _Supports automatic audio generation_
   duration?: 5 | 10,
   resolution?: "480p" | "720p" | "1080p",
   aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1",
-  shot_type?: "single" | "multi"  // Single/multi-shot switching
+  shot_type?: "single" | "multi"
 }
 ```
 
@@ -613,11 +613,11 @@ _Multimodal reference video generation_
 ```typescript
 {
   model: "seedance-2-0",
-  prompt?: string,                // max 2000 characters
-  images?: string[],             // max 9 reference images
-  videos?: string[],             // max 3 reference videos
-  audios?: string[],              // max 3 reference audios
-  duration?: number,             // 4-15 seconds
+  prompt?: string,
+  images?: string[],
+  videos?: string[],
+  audios?: string[],
+  duration?: number,
   resolution?: "480p" | "720p",
   aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1" | "21:9"
 }
@@ -635,11 +635,11 @@ _Faster multimodal reference video generation_
 ```typescript
 {
   model: "seedance-2-0-fast",
-  prompt?: string,                // max 2000 characters
-  images?: string[],             // max 9 reference images
-  videos?: string[],             // max 3 reference videos
-  audios?: string[],              // max 3 reference audios
-  duration?: number,             // 4-15 seconds
+  prompt?: string,
+  images?: string[],
+  videos?: string[],
+  audios?: string[],
+  duration?: number,
   resolution?: "480p" | "720p",
   aspect_ratio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1" | "21:9"
 }
@@ -662,7 +662,7 @@ _Aurora video generation from xAI_
 {
   model: "grok-video",
   prompt: string,
-  images?: string[],             // Reference images
+  images?: string[],
   duration?: 6 | 10 | 15,
   resolution?: "480p" | "720p",
   aspect_ratio?: "1:1" | "3:2" | "16:9" | "2:3" | "9:16"
@@ -700,9 +700,9 @@ _Precision motion control via video references (latest version)_
 ```typescript
 {
   model: "kling-motion-control-3-0",
-  prompt: string,                // Required: Detailed motion description
-  images: string[],              // Required: min 1 reference image
-  videos: string[],              // Required: min 1 reference video
+  prompt: string,
+  images: string[],
+  videos: string[],
   resolution?: "720p" | "1080p"
 }
 ```
